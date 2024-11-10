@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.health.mapper.LoginMapper">
+        <select id="loginMessage" resultType="com.example.health.bean.User">
+                select * from user where name = #{name} and password = #{password}
+        </select>
+
+        <select id="loginAdmin" resultType="com.example.health.bean.Admin">
+                select * from admin where name = #{name} and password = #{password}
+        </select>
+
+        <select id="loginDoctorMessage" resultType="com.example.health.bean.Case">
+                select * from chestcase where doctor = #{doctor} and password = #{password}
+        </select>
+
+        <select id="Verification" resultType="String">
+            select password from User where email = #{0}
+        </select>
+
+        <insert id="registered" parameterType="com.example.health.bean.User">
+                insert into user(name,password,phone,email,account)
+                values (#{name},#{password},#{phone},#{email},#{account})
+        </insert>
+
+        <insert id="registeredD" parameterType="com.example.health.bean.Case">
+                insert into chestcase(doctor,password,content,price,type,point)
+                values (#{doctor},#{password},#{content},#{price},#{type},0)
+        </insert>
+
+        <select id="nameRepeatYesOrNo" resultType="com.example.health.bean.User">
+                select * from user where name = #{name};
+        </select>
+</mapper>

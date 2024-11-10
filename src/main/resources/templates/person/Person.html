@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>画手交易平台</title>
+	<link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/vendor/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Inspire Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+	<link href="../ACredit/jsIndex/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+
+	<link rel="stylesheet" href="../ACredit/jsIndex/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../ACredit/jsIndex/chocolat.css" type="text/css" media="all">
+
+	<link href='//fonts.googleapis.com/css?family=Josefin+Sans:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+	<script src="../ACredit/js/jquery-1.12.4.min.js"></script>
+
+	<script>
+		document.getElementsByTagName('body').height=window.innerHeight;
+	</script>
+
+</head>
+
+<body>
+<div class="logo-navigation-w3layouts">
+	<div class="container">
+		<div class="logo-w3">
+			<a href="../index.html"><h1><img src="../ACredit/images/logo.png"/><span>画手交易系统</span></h1></a>
+		</div>
+		<div class="navbar-collapse agileits w3layouts collapse hover-effect" id="navbar">
+			<ul class="agileits w3layouts">
+				<li class="agileits w3layouts"><a href="../dynamic.html" >画手交易论坛</a></li>
+				<li class="agileits w3layouts"><a href="../expertChat.html" id="sellDraw">画手买卖网</a></li>
+				<li class="agileits w3layouts" id="buyMess"><a href="../doctor/doctor.html">买家消息</a></li>
+				<li class="agileits w3layouts"><a href="../person/Person.html">个人中心</a></li>
+				<li class="agileits w3layouts"><a href="../login.html">退出登录</a></li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<div class="my-account-wrapper section-padding">
+	<div class="container">
+		<div class="section-bg-color">
+			<div class="row">
+				<div class="col-lg-12">
+
+					<div class="myaccount-page-wrapper">
+
+						<div class="row">
+							<div class="col-lg-3 col-md-4">
+								<div class="myaccount-tab-menu nav" role="tablist" style="margin-top: -58px;">
+									<h3 style="margin-bottom: 30px;">个人信息</h3>
+									<a href="#Introduction" class="active" data-toggle="tab"><i class="fa fa-dashboard"></i>自我简介</a>
+									<a href="#MySetting" data-toggle="tab"><i class="fa fa-user"></i>修改密码</a>
+								</div>
+							</div>
+
+							<div class="col-lg-9 col-md-8">
+								<div class="tab-content" id="myaccountContent">
+
+									<div class="tab-pane fade show active" id="Introduction" role="tabpanel">
+										<div class="myaccount-content">
+											<h5>Hello, <strong id="myName"></strong></h5>
+											<div class="welcome">
+												<div class="checkout-page-wrapper section-padding">
+													<div class="container" style="margin-top: -80px;">
+														<div class="row">
+															<div class="col-lg-6">
+																<div class="checkout-billing-details-wrap">
+																	<div class="billing-form-wrap">
+																		<div class="single-input-item" style="margin-left: -90px">
+																			<label for="netName" class="required" style="width: 140px">netName(网名)</label>
+																			<input type="text" id="netName" placeholder="netName"  />
+																		</div>
+																		<div class="single-input-item" style="margin-left: -90px">
+																			<label for="email" class="required" style="width: 140px">Email(邮箱地址)</label>
+																			<input type="email" id="email" placeholder="Email Address" />
+																		</div>
+
+																		<div class="single-input-item" style="margin-left: -94px">
+																			<label for="country" class="required" style="width: 150px">Country(国家)</label>
+																			<input type="text" id="country" placeholder="Country" />
+																		</div>
+
+																		<div class="single-input-item" style="margin-left: -100px">
+																			<label for="phone" class="required" style="width: 160px">Phone(电话)</label>
+																			<input type="text" id="phone" placeholder="Phone" />
+																		</div>
+
+																		<div class="single-input-item" style="margin-left: -114px">
+																			<label for="Signature" class="required" style="width: 184px">个性签名</label>
+																			<textarea name="Signature" id="signature" cols="30" rows="2" style="height: 120px" placeholder="Not the same as their own."></textarea>
+																		</div>
+																		<div class="summary-footer-area">
+																			<button type="submit" class="btn btn-sqr" id="update" style="margin-left: -94px;margin-top: 30px" onclick="updateUser()">确定修改</button>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<!--本人头像-->
+															<div class="col-lg-6">
+																<div style="margin-left: -400px">
+																	<img src="" id="personImg" style="width: 200px;height: 200px"><br>
+																	<div style="margin-top: 20px">
+																		<button class="btn btn-sqr" onclick="loadWord()" id="uploadHead">上传</button>
+																		<button class="btn btn-sqr" style="margin-left: 10px" onclick="uploadSure()">确定修改</button>
+																		<input type="file" style="display:none" accept="image/*" id="upload"/>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="tab-pane fade" id="MySetting" role="tabpanel">
+										<div class="myaccount-content">
+											<h5>Password</h5>
+											<div class="setting" style="width: 300px">
+												请输入原密码：<input type="password" id="passwd"><br>
+												请输入新密码：<input type="password" id="newpasswd1"><br>
+												请再次输入：<input type="password" id="newpasswd2">
+												<button class="btn btn-sqr" onclick="updatePassword()" style="margin-top: 10px">确定修改</button>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="../js/vendor/jquery-3.3.1.min.js"></script>
+<script src="../js/vendor/bootstrap.min.js"></script>
+<script src="../js/plugins/slick.min.js"></script>
+<script src="../js/plugins/nice-select.min.js"></script>
+<script src="../js/plugins/image-zoom.min.js"></script>
+<script src="../ACredit/js/jquery.cookie.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/md5.js"></script>
+<script src="Person.js"></script>
+<script src="../layer/layer.js"></script>
+
+</body>
+
+</html>

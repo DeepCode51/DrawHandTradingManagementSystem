@@ -1,0 +1,261 @@
+  *{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	background-color: #d8dcdf;
+	font-size: 18px;
+}
+.r-top{
+	height: 160px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.titile{
+	height: 130px;
+	padding: 20px;
+}
+
+.img{
+	float:left;
+}
+.img i{
+	font-size: 100px;
+}
+.detail-info{
+	float: left;
+	margin-left: 50px;
+}
+.p1{
+	font-family: "楷体";
+	font-size: 44px;
+}
+.p2{
+	font-size: 30px;
+	color: #545557;
+	letter-spacing: 5px;
+}
+.myinput{
+	margin-left: 175px;
+}
+.e-input{
+	float: left;
+	margin-right: 60px;
+}
+.e-input input{
+	background-color: #EFF3F4;
+	border: 0;
+	width: 230px;
+	border-radius: 3px;
+	text-indent: 8px;
+	height: 40px;
+}
+.choice{
+	background-color: #EFF3F4;
+	border-radius: 3px;
+	text-indent: 8px;
+	width: 150px;
+	display:inline-block;  
+	}
+.search{
+	float: left;
+	margin-right: 30px;
+	font-size: 24px;
+}
+ .search button{
+	color: #8A8F95;
+	cursor:pointer;
+	background-color:#d8dcdf;
+	border:0px; 
+}
+.r-main{
+	background-color: white;
+	color:#8a8f95;
+	padding: 15px;
+	min-height: 1000px;
+	overflow: auto;
+}
+.alldetele{
+	margin-right: 20px;
+}
+.alldetele span{
+	position: relative;
+	margin-left: 5px;
+	top:3px;
+}
+.table{
+	text-align: center;
+	font-size: 14px;
+}
+.first{
+		text-align: left;
+}
+.mybtn{
+	text-align: center;
+	margin-top: 20px;
+}
+.mybtn span{
+	display: inline-block;
+	width: 240px;
+}
+.bcolor:hover{
+	background-color: #838F9B;
+}
+.bcolor :active{
+	background-color: #838F9B;
+}
+.bcolor:focus{
+	outline: none;
+	background-color: whitesmoke;
+}
+.update{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding-top: 30px;
+	width: 450px;
+	height:560px;
+	background: white;
+	border-radius: 5px;
+	}
+	.update label{
+		width: 300px;
+		margin: 10px auto;
+	}
+	.update span{
+		display: inline-block;
+		margin-right: 10px;
+		width: 80px;
+		text-align: right;
+		font-weight: lighter;
+	}
+	.update select{
+		width: 150px;
+		margin: 10px 0 0 0;
+	}
+	.update input{
+		width: 150px;
+		margin: 10px;
+		border: 1px solid gainsboro;
+	}
+	input[type=file]{
+		display: inline-block;
+		border: 0px;
+	}
+	.ebtn input{
+		width: 80px;
+	}
+	.ebtn{
+		text-align: center;
+		margin-top: 20px;
+	}
+	.ebtn span{
+		display: inline-block;
+		width: 60px;
+	}
+	.page{
+	    min-width:405px;
+		text-align: center;
+	}
+	.allpage{
+	display: inline-block;
+}
+.allpage li{
+	display: inline;
+}
+.allpage li a{
+	 position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.42857143;
+  color: #337ab7;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;	
+}
+.allpage li a:hover,
+.allpage li a:focus{
+	color: #23527c;
+  background-color: #eee;
+  border-color: #ddd;
+}
+.allpage  .active >a,
+.allpage  .active >a:hover,
+.allpage  .active >a:focus{
+z-index: 2;
+  color: #fff;
+  cursor: default;
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
+
+@media screen and (max-width:768px ) {
+	.e-input{
+		float: left;
+		margin-right: 40px;
+	}
+	.e-input input{
+		background-color: #EFF3F4;
+		border: 0;
+
+		border-radius: 3px;
+		text-indent: 8px;
+	}
+
+}
+@media screen and (max-width:660px ) {
+	.titile{
+		height: 80px;
+		padding: 8px;
+		width:375px;
+		position: relative;
+		left: 50%;
+		margin-left:-135px;
+	}
+	.img i{
+	font-size: 50px;
+	}
+	.detail-info{
+		float: left;
+		margin-left: 5px;
+	}
+	.p1{
+		font-family: "楷体";
+		font-size: 28px;
+	}
+	.p2{
+		font-size: 16px;
+		color: #545557;
+		letter-spacing: 2px;
+	}
+	.myinput{
+		margin-left: 65px;
+	}
+	.e-input{
+		margin-top: 9px;
+		float: left;
+		width: 200px;
+		margin-right: 10px;
+	}
+	.choice{
+		width: 150px;
+		background-color: #EFF3F4;
+}
+	.e-input input{
+		background-color: #EFF3F4;
+		border: 0;
+		border-radius: 3px;
+		text-indent: 8px;
+	}
+	.search{
+		float: left;
+		margin-left:20px;
+		margin-top: 10px;
+		font-size: 24px;
+	}
+	.mybtn span{
+		width: 100px;
+	}
+}

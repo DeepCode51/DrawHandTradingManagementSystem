@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.health.mapper.UserMapper">
+        <select id="selectPersonalInformation" resultType="com.example.health.bean.userBankCard">
+                select * from user where name = #{name }
+        </select>
+
+        <select id="selectUserInformation" resultType="com.example.health.bean.userBankCard">
+                select * from user where name = #{name }
+        </select>
+
+        <update id="updateUserMessage" parameterType="com.example.health.bean.User">
+                        update user set
+                                netname = #{netName },
+                                email = #{email},
+                                country = #{country},
+                                phone = #{phone},
+                                signature = #{signature}
+                        where id = #{id}
+        </update>
+
+        <insert id="addCardMessage">
+                insert into bank(bankUserID,bankName,bankCard,bankBalance) values (#{bankUserID},#{bankName},#{bankCard},1000)
+        </insert>
+
+        <update id="updatePassword">
+                update user set password = #{password} where id = #{id}
+        </update>
+
+        <delete id="deleteCard">
+                delete from bank where bankID = #{id}
+        </delete>
+
+        <insert id="sendMessage">
+                INSERT into opinion (opinionName,opinionphone,opinionEmail,opinionTime,opinionMessage,sendName)
+                VALUES(#{sendName},#{phone},#{email},#{time},#{message},#{name})
+        </insert>
+
+        <select id="selectCardMoney" resultType="int">
+                select bankBalance from bank where bankCard = #{bankCardNow}
+        </select>
+
+        <update id="updateCardMoney">
+                update bank set bankBalance = #{cardMoney} where bankCard = #{bankCardNow}
+        </update>
+
+        <update id="vxPay">
+                update user set vx = #{vx} where name = #{name }
+        </update>
+
+        <update id="zfbPay">
+                update user set zfb = #{zfb} where name = #{name }
+        </update>
+
+        <update id="myAccountUpdate">
+                update user set account = #{account} where name = #{name }
+        </update>
+
+        <select id="selectBankParameter" resultType="int">
+                select bankCard from bank where parameter = #{parameterBank} and bankUserID = #{userID}
+        </select>
+
+        <update id="updateBankCardNow">
+                update bank set parameter = #{parameter} where bankCard = #{bankCardNow} and bankUserID = #{userID}
+        </update>
+
+        <update id="updateBankCardAfter">
+                update bank set parameter = #{parameter} where bankCard = #{bankCardAfter} and bankUserID = #{userID}
+        </update>
+
+        <update id="payMoney">
+                update user set account = #{account}
+                where id = #{userID}
+        </update>
+
+        <update id="deleteCart">
+                update cart set cartParameter = 0 where cartID = #{cardID}
+        </update>
+</mapper>

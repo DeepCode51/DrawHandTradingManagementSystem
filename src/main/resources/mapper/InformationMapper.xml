@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.health.mapper.InformationMapper">
+        <select id="InformationList" resultType="Chat">
+               select * from chat
+               <if test="sendName!=null and sendName !=''">
+                   where sendName = #{title}
+               </if>
+        </select>
+
+        <update id="sureUpdateInfor">
+            update information set title = #{title},image = #{fileName} ,content = #{content},kind = #{kind}
+            where id = #{id}
+        </update>
+
+        <delete id="deleteInfor">
+            delete from chat where id = #{id}
+        </delete>
+        
+        <insert id="saveSureAddIn">
+            insert into information (image,title,kind,content,look) values (#{fileName},#{title},#{kind},#{content},0);
+        </insert>
+
+        <select id="selectKindContent" resultType="Information">
+            select * from information where kind = #{kind} limit #{start},3
+        </select>
+
+        <select id="selectCount" resultType="int">
+            select count(*) from information where kind = #{kind}
+        </select>
+
+        <select id="selectTanKuang" resultType="Information">
+            select * from information where id = #{id} ;
+        </select>
+
+        <update id="readAdd">
+            update information set look = #{num} where id = #{id}
+        </update>
+</mapper>

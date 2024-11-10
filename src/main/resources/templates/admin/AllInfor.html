@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>作品管理</title>
+	<link rel="stylesheet" type="text/css" href="../ACredit/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="../ACredit/css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="../ACredit/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../ACredit/css/stuManger.css" />
+</head>
+
+<body>
+<div class="r-top">
+	<div class="titile">
+		<div class="img">
+			<i>
+				<img src="../ACredit/img/photo.jpg" style="width: 120px;margin-top: -15px">
+			</i>
+		</div>
+		<div class="detail-info">
+			<span class="p1">信息管理</span><br />
+		</div>
+	</div>
+	<div class="myinput" style="margin-top: -20px">
+		<div class="e-input">
+			<input type="text" placeholder="请输入信息发送人..." width="400px" id="content" />&nbsp;&nbsp;
+			<button style="width: 80px;height: 40px;border: none; background: #EFF3F4" onclick="selectByNameOrCard()">查询</button>
+		</div>
+	</div>
+</div>
+<!--<button style="width: 80px;height: 40px;border: none; background: #EFF3F4" onclick="addInformation()">增加信息</button>-->
+<div class="r-main">
+
+	<div class="table-responsive">
+		<table class="table table-striped table-hover">
+			<thead>
+			<tr>
+				<td>序号</td>
+				<td>发送者</td>
+				<td>发送内容</td>
+				<td>接受者</td>
+				<td>关于的作品</td>
+				<td>作品评价</td>
+				<td>作品价钱</td>
+				<td>作品</td>
+				<td>操作</td>
+			</tr>
+			</thead>
+			<!--student 动态列表-->
+			<tbody id="studentHtml">
+			</tbody>
+		</table>
+	</div>
+
+	<!--删除界面-->
+	<div id="deleteStuHtml" style="display: none">
+		<h2 style="text-align: center;margin-top: 20px">是否确定删除？</h2><br>
+		<button  style="margin-left: 60px;margin-right: 60px;height: 40px;width: 80px" onclick="CancelHtml()">取消</button>
+		<button  onclick="deleteDoc()" style="height: 40px;width: 80px">确定</button>
+	</div>
+
+</div>
+
+<script src="../ACredit/js/jquery.min.js" type="text/javascript"    charset="utf-8"></script>
+<script src="../ACredit/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../ACredit/layer/layer.js"></script>
+<script src="../login.js"></script>
+<script src="AllInfor.js"></script>
+</body>
+</html>

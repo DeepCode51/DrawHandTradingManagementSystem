@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.health.mapper.DynamicMapper">
+        <select id="selectDynamic" resultType="com.example.health.bean.Dynamic">
+             select * from dynamic
+                <if test="DynamicSendName!=null and DynamicSendName!=''">
+                        where DynamicSendName = #{DynamicSendName}
+                </if>
+        </select>
+        <insert id="saveDynamicContent">
+            insert into dynamic(DynamicSendName,DynamicPhoto,DynamicTime,DynamicPath,DynamicAddress,DynamicContent)
+            values (#{DynamicSendName},#{DynamicPhoto},#{DynamicTime},#{DynamicPath},#{DynamicAddress},#{DynamicContent})
+        </insert>
+
+        <update id="savePersonHead">
+             update user set path = #{personHead} where name = #{name}
+        </update>
+
+        <select id="selectDynamicMe" resultType="com.example.health.bean.Dynamic">
+                select * from dynamic where DynamicSendName = #{setName};
+        </select>
+
+        <select id="selectVBNum" resultType="Integer">
+                select count(*) from dynamic where DynamicSendName = #{name};
+        </select>
+
+        <delete id="deleteDynamic">
+                delete from dynamic where DynamicID = #{ID}
+        </delete>
+
+        <insert id="sendDynamicContent">
+                insert into dynamic (DynamicSendName, DynamicTime, DynamicAddress, DynamicContent, DynamicPhoto)
+                values (#{DynamicSendName},#{DynamicTime},#{DynamicAddress},#{DynamicContent},#{DynamicPhoto});
+        </insert>
+
+        <update id="updateDynamicHead">
+                update dynamic set DynamicPhoto = #{fileName} where DynamicPhoto = #{personImg}
+        </update>
+
+        <update id="clickPraise">
+                update dynamic set DynamicZanNum = #{praise} where DynamicID = #{id}
+        </update>
+        
+        <insert id="sendComment">
+                insert into comment (sendName, time, content, commentPath, photo, commentContent, commentName)
+                values (#{sendName},#{time},#{content},#{commentPath},#{photo},#{commentContent},#{commentName});
+        </insert>
+
+        <select id="clickComment" resultType="com.example.health.bean.Comment">
+                select * from comment
+                <where>
+                        <if test="commentPath!=null and commentPath!=''">
+                                and commentPath = #{commentPath}
+                        </if>
+                        <if test="commentName!=null and commentName!=''">
+                                and commentName = #{commentName}
+                        </if>
+                        <if test="commentContent!=null and commentContent!=''">
+                                and commentContent = #{commentContent}
+                        </if>
+                </where>
+        </select>
+</mapper>

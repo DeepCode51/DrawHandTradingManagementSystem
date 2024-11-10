@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>找回密码</title>
+		<link rel="stylesheet" type="text/css" href="ACredit/css/findpass.css" />
+		<script type="text/javascript" src="ACredit/js/html5.js" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="container demo-1">
+			<div class="content">
+				<div id="large-header" class="large-header">
+					<canvas id="demo-canvas"></canvas>
+					<div class="logo_box">
+						<h1>找回密码</h1>
+						<div class="first">
+							<p>邮箱找回密码</p>
+								<form action=""  role="form" >
+									    <div class="sno s-left">
+											邮箱&nbsp;&nbsp;&nbsp;
+											<input type="text" id="email" style="outline:none;" placeholder="请输入邮箱"/>
+											<button class="mycheck" type="button"  onclick="Verification()">验证</button>
+										</div>
+										<div class="sno">
+											验证码<input type="text" id="ramCode"  style="outline:none;" placeholder="请输入验证码"/>
+										</div>
+									<a href="login.html" style="text-decoration: none;margin-left: 50px">返回登录</a>
+									<input type="button" value="确定找回" onclick="findPass()" class="submit" style="margin-left: 40px"/>
+								</form>
+						</div>
+
+					</div>
+				</div>		
+			</div>		
+		</div>
+		
+	<script type="text/javascript" src="ACredit/js/TweenLite.min.js"></script>
+	<script type="text/javascript" src="ACredit/js/EasePack.min.js"></script>
+	<script type="text/javascript" src="ACredit/js/rAF.js"></script>
+	<script type="text/javascript" src="ACredit/js/demo-1.js"></script>
+ 	<script type="text/javascript" src="ACredit/js/jquery.min.js"></script>
+	<script type="text/javascript" src="ACredit/js/jquery.md5.js"></script>
+	<script src="login.js"></script>
+	<script src="findPass.js"></script>
+	</body>
+</html>

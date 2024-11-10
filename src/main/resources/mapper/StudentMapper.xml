@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.health.mapper.StudentMapper">
+
+
+        <select id="selectPersonContent" resultType="User">
+            select * from user where name = #{0}
+        </select>
+
+        <select id="selectStu" resultType="User">
+                select * from user
+                <if test="name != null and name != ''">
+                     where name = #{0}
+                </if>
+        </select>
+
+        <update id="updatePersonContent">
+                update user
+                    set  name = #{name},
+                         phone = #{phone},
+                         email = #{email},
+                         country = #{country},
+                         content = #{content}
+                where id = #{id}
+        </update>
+
+        <update id="updatePassword">
+                update user
+                    set password = #{password}
+                    where id = #{id}
+        </update>
+
+        <insert id="sendOpinion">
+                insert into opinion(sendName,phone,email,content,time)
+                values (#{sendName},#{phone},#{email},#{content},#{time})
+        </insert>
+
+        <delete id="deleteStu">
+                delete from user where id = #{id}
+        </delete>
+
+        <select id="selectOpin" resultType="Opinion">
+                select * from opinion
+                <if test="sendName!=null and sendName!=''">
+                    where sendName = #{sendName}
+                </if>
+        </select>
+
+        <delete id="deleteOpin">
+            delete from opinion where id = #{id}
+        </delete>
+</mapper>

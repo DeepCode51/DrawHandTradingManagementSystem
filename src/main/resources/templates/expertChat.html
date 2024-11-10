@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>画手交易平台</title>
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Inspire Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	
+	<link href="ACredit/jsIndex/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="ACredit/jsIndex/popup-box.css" rel="stylesheet" type="text/css" media="all" />
+	
+	<link rel="stylesheet" href="ACredit/jsIndex/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="ACredit/jsIndex/chocolat.css" type="text/css" media="all">
+	
+	<link href='//fonts.googleapis.com/css?family=Josefin+Sans:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	
+	<script src="ACredit/js/jquery-1.12.4.min.js"></script>
+	<script src="ACredit/jsIndex/bootstrap.js"></script>
+	
+		<script src="ACredit/jsIndex/modernizr.custom.97074.js"></script>
+		<script src="ACredit/jsIndex/jquery.chocolat.js"></script>
+		<script>
+		    document.getElementsByTagName('body').height=window.innerHeight;
+		</script>
+		<style>
+			.containerChat {
+			    height: 100%;
+			    width: 100%;
+			    display: flex;
+			    margin: 0;
+			}
+			.chatright {
+			    background-color: #ffffff;
+			    width: 100%;
+			    height: 100%;
+			}
+			.chatright .top {
+			    height: 10%;
+			    display: flex;
+			    align-items: center;
+			    padding-left: 30px;
+			}
+			.chatright .center {
+			    background-color: #edf5f8;
+			    height: 65%;
+			    overflow-y: scroll;
+			}
+			.chatright .center ul {
+			    padding: 10px;
+			}
+			.chatright .center li {
+			    margin: 10px;
+			    width: 100%;
+			}
+			.chatright .center p{
+			    display: inline-block;
+			}
+			.msgcard {
+			    margin: 0 10px 0 10px;
+			    background-color: white;
+			    border-radius: 10px;
+			    padding: 10px;
+			    max-width: 60%;
+			}
+			.msgleft {
+			    float: left;
+				align-self:flex-start;
+			}
+			.msgright {
+			    float: right;
+				align-self: flex-end;
+			}
+			.chatright .footer {
+			    height: 25%;
+			    background-color: #FBFCFC;
+			    text-align: right;
+			}
+			.sendbtn {
+			    height: 40px;
+			    width: 80px;
+			    border-radius: 10px;
+			    background-color: #58D68D;
+			    color: white;
+			    font-weight: bold;
+			    margin:10px 20px 0 0;
+		}
+			.button-success {
+				color: white;
+
+				border-radius: 4px;
+
+				text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+
+			}
+
+			.button-success {
+				background: #87b106; /* this is a green */
+
+			}
+			ul.IsignUp li{
+				margin-top:5px;
+			}
+			input.inputLine{
+				width:280px;
+				height: 44px;
+				padding: .375rem .75rem;
+				border-radius: .25rem;
+				border: 1px solid #ced4da;
+			}
+			input.inputLine:focus{
+				border-style:solid;
+				border-color: #03a9f4;
+				box-shadow: 0 0 5px #03a9f4;
+			}
+			input.inputLeft{
+				width:130px;
+			}
+			button,select{
+				padding: .375rem .75rem;
+				border-radius: .25rem;
+				border: 1px solid #ced4da;
+			}
+			button:hover,select:hover{
+				border-color: #03a9f4;
+			}
+			button:active {
+				background:#03a9f4;
+			}
+		</style>
+</head>
+
+<body>
+    <div class="logo-navigation-w3layouts">
+    	<div class="container">
+    	<div class="logo-w3">
+    		<a href="index.html"><h1><img src="ACredit/images/logo.png"/><span>画手交易系统</span></h1></a>
+    	</div>
+    	<div class="navbar-collapse agileits w3layouts collapse hover-effect" id="navbar">
+    		<ul class="agileits w3layouts">
+				<li class="agileits w3layouts"><a href="dynamic.html" >画手交易论坛</a></li>
+				<li class="agileits w3layouts"><a href="expertChat.html" id="sellDraw">画手买卖网</a></li>
+				<li class="agileits w3layouts" id="buyMess"><a href="doctor/doctor.html">买家消息</a></li>
+				<li class="agileits w3layouts"><a href="person/Person.html">个人中心</a></li>
+				<li class="agileits w3layouts"><a href="login.html">退出登录</a></li>
+    		</ul>
+    	</div>		
+    	<div class="clearfix"></div>
+    	</div>
+    </div>
+	<span style="font-size: 50px" id="titleChat">画手交易平台(卖家端)</span>
+
+        <div class="cart-main-wrapper section-padding" style="margin-top: 30px; text-align: center;">
+            <div class="container">
+                <div class="section-bg-color">
+                    <div class="row">
+                        <div class="col-lg-12">                      
+                            <div class="cart-table table-responsive" style="margin-top: -70px;">
+								<button id="uploadWorks" onclick="uploadWorks()" class="button-success" style="margin-left: -1052px;height: 38px;width: 88px">上传作品</button>
+                                <table class="table table-bordered" style="margin-top: 10px">
+                                    <thead>
+                                        <tr>
+                                            <th class="pro-thumbnail">序号</th>
+                                            <th class="pro-title">标题</th>
+                                            <th class="pro-price">发布价钱</th>
+                                            <th class="pro-subtotal">画家名称</th>
+                                            <th class="pro-subtotal">画家作品</th>
+                                            <th class="pro-subtotal">关于作品</th>
+                                            <th class="pro-subtotal" id="shenhe">审核状态</th>
+                                            <th class="pro-remove" id="liaotian">聊天</th>
+                                            <th class="pro-remove" id="caozuo">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="caseHtml">
+                                    </tbody>
+                                </table>                              
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>     
+		
+		<div class="containerChat" style="display: none;height: 500px" id="chatHtml">
+		        <div class="chatright">
+		            <div class="top">
+		                <img style="border-radius: 20px; vertical-align: middle;width: 35px;height: 35px;" src="img/head.gif">
+		                <span style="margin-left: 20px;" id="chatName"></span>
+		            </div>
+		            <div class="center" id="chatHtmlBuild">
+		            </div>
+		            <div class="footer">
+		                <textarea maxlength="800" rows="5" cols="40" style="width: 100%; resize: none; border: #000000; " id="chatMess" placeholder="请在此输入要发送的内容..."></textarea>
+		                <button class="sendbtn" style="cursor: pointer;" onclick="sendChat()">发送</button>
+		            </div>
+		        </div>
+		</div>
+
+	<div style="display: none;margin-left: -20px;margin-top: 20px" id="editWorksHtml">
+		<ul class="IsignUp" style="padding:0px">
+			<li style="margin-top: 10px">
+				标题：<input class="inputLine" type="text" id="uTitle" placeholder="请输入您的标题" style="margin-left: 14px">
+			</li>
+			<li>
+				价钱：<input class="inputLine" type="text" id="uPrice" placeholder="请输入您的价钱" style="margin-left: 14px">
+			</li>
+			<li>
+				设计师：<input class="inputLine" type="text" id="uDesigner" placeholder="设计师名称" readonly>
+			</li>
+			<li style="margin-top: 15px">
+				<span style="margin-left: 84px">作品：</span>
+				<img src="" id="uImg" style="width: 80px;height: 70px">
+				<input type="file" id="uShow" style="float: right;height: 44px;margin-top: 43px">
+			</li>
+			<li style="margin-top: 0px">
+				备注：<input class="inputLine" style="height:80px;margin-left: 14px" id="uIntroduce" placeholder="请输入您想说关于作品的话！"/>
+			</li>
+			<br><br>
+			<button class="inputLine" type="button" class="i-button" onclick="editUploadWorks()">
+				确定修改
+			</button>
+			<input type="text" id="editId" style="display: none">
+		</ul>
+	</div>
+
+
+	<div style="display: none;margin-left: -20px;margin-top: 20px" id="uploadWorksHtml">
+		<ul class="IsignUp" style="padding:0px">
+			<li style="margin-top: 10px">
+				标题：<input class="inputLine" type="text" id="title" placeholder="请输入您的标题" style="margin-left: 14px">
+			</li>
+			<li>
+				价钱：<input class="inputLine" type="text" id="price" placeholder="请输入您的价钱" style="margin-left: 14px">
+			</li>
+			<li>
+				设计师：<input class="inputLine" type="text" id="designer" placeholder="设计师名称" readonly>
+			</li>
+			<li style="margin-top: 15px">
+				<span style="margin-left: 7px">作品：</span><input type="file" id="show" style="float: right;height: 44px">
+			</li>
+			<li>
+				备注：<input class="inputLine" style="height:80px;margin-left: 14px" id="introduce" placeholder="请输入您想说关于作品的话！"/>
+			</li>
+			<br><br>
+			<button class="inputLine" type="button" class="i-button" onclick="sendUploadWorks()">
+				确定上传
+			</button>
+		</ul>
+	</div>
+			
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins/slick.min.js"></script>
+    <script src="js/plugins/nice-select.min.js"></script>
+    <script src="js/plugins/image-zoom.min.js"></script>
+	<script src="ACredit/js/jquery.cookie.js"></script>
+    <script src="js/main.js"></script>
+	<script src="expertChat.js"></script>
+	<script src="layer/layer.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+		<title>管理员界面</title>
+		<link rel="stylesheet" type="text/css" href="../ACredit/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="../ACredit/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../ACredit/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../ACredit/css/index.css"/>
+
+	</head>
+	<body>
+		<div class="header">
+			<div class="h-info" style="margin-left: -66px;">
+				<span class="s2 hidden-xs">画手交易系统后台</span>
+			</div>
+			<div class="p-info">
+				<span class="s3">
+					<a href="login.html">
+						注销
+					</a>
+				</span>
+			</div>
+		</div>
+		<div class="main">
+			<div class="left">
+				<div class="l-body">
+					<div class="list-body">
+						<ul class="nav nav-pills nav-stacked navbar-brand">
+							<li><a href="AllStudent.html" target="right"><span>&nbsp;&nbsp;用户管理</span></a></li>
+							<li><a href="AllDoctor.html" target="right"><span>&nbsp;&nbsp;作品管理</span></a></li>
+							<li><a href="AllBooks.html" target="right"><span>&nbsp;&nbsp;论坛管理</span></a></li>
+							<li><a href="AllInfor.html" target="right"><span>&nbsp;&nbsp;信息管理</span></a></li>
+							<li><a href="AllOpinion.html" target="right"><span>&nbsp;&nbsp;意见箱</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<div class="right">
+			<iframe id="frame" src="AllStudent.html" name="right" width="100%" height="100%" frameborder="no" border="0" marginwidth="0" marginheight="0"></iframe>
+		</div>
+		</div>
+
+	<script src="../ACredit/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../ACredit/js/jquery.md5.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../ACredit/js/jquery.cookie.js"></script>
+	<script src="../ACredit/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		$(function(){
+			$("#frame").load(function() {
+				 var iframeHeight = $(this).contents().find("body").height()+200;
+				 $(this).height(iframeHeight);
+				 var cookie = $.cookie("ManagerName");
+				 $("#user").text("用户:"+cookie);
+			 });
+		});
+
+		   $('.s1>a').click(function(){
+				$('.info').toggle();
+				$('.dropdown').toggle();
+			});
+			$('.p-info').bind("selectstart",function(){ return false;});
+
+			$(".fir , .sec ").click(function(){
+				$(".info").css("display","none");
+				$(".info ul").css("display","none");
+			});
+
+			$('.meun').click(function(){
+				var bool = $('.l-body').width()<200;
+				if(bool){
+					$('.l-body').toggle();
+				}
+
+			});
+			$(".list-body ul li a").click(function(){
+				var bool = $('.l-body').width()<200;
+				if(bool){
+					$('.l-body').css("display","none");
+				}
+			})
+		</script>
+
+	</body>
+</html>
+

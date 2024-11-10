@@ -1,0 +1,712 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 总容器 container */
+#container{
+	width:1000px;
+	height:auto;
+	margin:0px auto;
+	margin-top: -60px;
+}
+	/* 回到顶部 */
+	#backtop {
+		position:fixed;
+		bottom: 0px;
+		right:0px;
+	}
+	/* 回到顶部样式 */
+	#backtop a {
+		width: 60px;
+		display: block;
+		text-align: center;
+		font-size:11px;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #bbb;
+		/* 背景颜色过渡 */
+		-webkit-transition: 1s;
+		-moz-transition: 1s;
+		transition: 1s;
+	}
+	#backtop a:hover {
+		color: #000;
+	}
+	/* 回到顶部按钮(span) */
+	#backtop span {
+		width: 60px;
+		height: 60px;
+		display: block;
+		margin-bottom: 7px;
+		background: #C1E6F5 url(../images/up-arrow.png) no-repeat center center;
+		/* 圆角 */
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		/* 背景颜色过渡 */
+		-webkit-transition: 1s;
+		-moz-transition: 1s;
+		transition: 1s;
+	}
+	#backtop a:hover span {
+		background-color: #B8DDEB;
+	}
+
+	/* 上面topDIV */
+	#top{
+		width:765px;
+		height:80px;
+		position:relative;
+	}
+	
+	/* top部分的LogoDIV */
+	#topLogo{
+		width:200px;
+		height:80px;	
+	}
+		/* topLogo部分的icoDIV */
+		#topLogoIco{
+			width:72px;
+			height:72px;
+			margin-top:4px;
+			float:left;
+		}
+		/* topLogo部分的wordDIV */
+		#topLogoWord{
+			width:128px;
+			height:60px;
+			float:left;
+			margin-top:12px;
+		}
+			/* topLogo下的img */
+			#topLogo img{
+				border:none;
+			}
+	/* top部分的文字导航 */
+	#topWordMenu{
+		width:330px;
+		height:30px;
+		position:absolute;
+		top:33px;
+		left:430px;
+	}
+		/* top部分的ul */
+		#topWordMenu ul{
+			margin:0px;
+			padding:0px;
+			list-style:none;
+		}
+			/* top部分的li */
+			#topWordMenu ul li{
+				display:inline;
+				/*float:left;*/
+				margin:0px 8px;
+			}
+			/* top部分的文字链接 */
+			#topWordMenu a:link{
+				text-decoration:none;
+			}
+			#topWordMenu a:visited{
+				text-decoration:none;
+			}
+			#topWordMenu a:hover{
+				color:#FFF;
+				text-decoration:none;
+			}
+	
+	/* 内容总容器 mainDIV */
+	#main{
+		border:0px;
+		padding:0px;
+		margin:0px auto;
+		width:765px;
+		height:auto;
+	}
+		/* 左侧mainBannerDIV */
+		#mainBanner{
+			border:0px;
+			padding:0px;
+			margin:0px;
+			height:auto;
+			width:565px;
+			float:left;
+			background-color:#FFF;
+			padding-bottom:10px;
+		}
+		  #mainBannerTop{
+			  width:562px;
+			  height:217px;
+			  padding:0px;
+			  margin:0px;
+			  position:relative;
+			  background-color:#FFF;
+			  }	
+			  /* 表情 */
+			  #biaoqing{
+					position:absolute;
+					top:200px;
+					left:135px;
+					z-index:2;
+					background-color: #FFFFFF;
+					visibility:hidden;
+			  }
+			/*id=mainBannerTopIssue 发布框*/
+			#mainBannerTopIssue{
+				height:191px;
+				width:521px;
+				margin:0px;
+				padding:0px;
+				left:20px;
+				top:26px;
+				position:absolute;
+				}
+				/*id=mainBannerTopIssuePoint开始提示*/
+				#mainBannerTopIssuePoint{
+					width:521px;
+					margin:0px;
+					padding:0px;
+					height:37px;
+					padding:0px;
+					margin:0px;
+					font-size:16px;
+					}
+				/*id=mainBannerTopIssueFrom大表框*/	
+				#mainBannerTopIssueForm{
+					width:521px;
+					height:149px;
+					padding:0px;
+					margin:0px;
+					}
+				  /*mainBannerTopIssueFrame*/	
+				  #mainBannerTopIssueFrame{
+					  width:521px;
+					  height:90px;
+					  padding:0px;
+					  margin:0px;
+					  position:relative;
+					  }
+					  /*mainBannerTopIssueFrame里的类*/	
+					  #mainBannerTopIssueFrame .Size{
+						  width:521px;
+						  height:90px;
+						  padding:0px;
+						  margin:0px;
+						  }
+					/*可以插入链接*/		  
+				  #mainBannerTopIssueInsert{
+					  width:521px;
+					  height:29px;
+					  }	
+					  /*4个小div*/
+					  #mainBannerTopIssueInsert1{
+	                      width:20px;
+	                      height:20px;
+						  float:left;
+						  /*background-image:url(../img/DynamicImg/Album.jpg);*/
+						  margin-left:5px;
+						  margin-top:2px;
+					  }
+					 /* 插入图片 */
+					  #mainBannerTopIssueInsert2{
+	                      height:15px;
+	                      width:55px;
+						  float:left;
+						  line-height:15px;
+						   margin-top:7px;
+						  margin-left: -2px;
+					  }
+						  /* 插入表情 */
+						  #mainBannerTopIssueInsert5{
+							  margin-left:5px;
+							  width:17px;
+							  height:16px;
+							  background-image:url(../img/biaoqing/biaoqing_bg.gif);
+							  margin-top:5px;
+							  float:left;
+						  }
+						  /* 插入表情 */
+						  #mainBannerTopIssueInsert6{
+							  margin-left:5px;
+							  margin-top:5px;
+							  float:left;
+						  }
+					  
+				 /*确认发布*/	 
+				  #mainBannerTopIssueSure{
+					  width:521px;
+					  height:30px;
+					  margin:0px;
+					  padding:0px;
+					  position:relative;
+					  text-align:right;
+					  }
+					  /*发布按钮*/
+					  #button1{
+						  width:81px;
+						  height:30px;
+					  }
+		#mainBannerTitle{
+			width:562px;
+			padding:0px;
+			margin:0px;
+			height:56px;
+			position:relative;
+			}
+			/*首页提示与隐藏*/
+		    #mainBannerTitleWord{
+			    width:62px;
+			    height:15px;
+			    font-size:15px;
+			    padding:0px;
+			    margin:0px;
+			    position:absolute;
+				top:29px;
+				left:20px;
+			    }	
+			/*首页提示与隐藏*/	
+			#mainBannerTitleWord2{
+				width:80px;
+				height:20px;
+				padding:0px;
+				margin:0px;
+				left:473px;
+				top:32px;
+				position:absolute;
+				display:none;
+				}		
+	      /*不同人的微博内容*/
+	      #mainBannerContent{
+				  width:480px;
+				  height:auto;
+				  margin:0px auto;
+				  margin-top:10px;
+				  border-top:1px #dddddd solid;
+				  position:relative;
+			  }
+			  /* 状态DIV设置 */
+			 #mainBannerContent .stateShow{
+				width:480px;
+				height:auto;
+				padding-top:5px;
+				margin:0px auto;
+				border-bottom:1px #ccc dotted;
+				padding-bottom:5px;
+			}
+			/* 回复DIV设置 */
+			#mainBannerContent .stateRshow{
+				width:410px;
+				height:auto;
+				padding-top:5px;
+				margin:0px auto;
+				border-bottom:1px #ccc dotted;
+				padding-bottom:5px;
+			}
+			
+		/* 状态展示中的头像设置 */
+		#mainBannerContent img{
+			margin-top:3px;
+			border:2px solid #ccc;
+		}
+		/* 状态展示中的链接设置*/
+		#mainBannerContent td a:link{
+			color:#005dc3;
+			text-decoration:none;
+			font-weight:bold;
+		}
+		/* 状态中链接的样式 */
+		#mainBannerContent td a:hover{
+			color:#005dc3;
+			text-decoration:underline;
+			font-weight:bold;			
+		}
+		#mainBannerContent td a:visited{
+			color:#005dc3;
+			text-decoration:none;
+			font-weight:bold;			
+		}
+		/* 状态展示里面的图片显示 */
+		
+		/* 状态展示时间框设置 */
+		#mainBannerContent .stateShowtime{
+			margin-top:5px;
+			color:#999999;
+			display:inline;
+		}
+			/* 回复框时间提示 */
+			#mainBannerContent .stateRshowtime{
+				margin-top:5px;
+				color:#999999;
+				margin-left:70px;
+				display:inline;
+			}
+			/* 每个状态的回复窗口 */
+			#mainBannerContent .huifu{
+				width:410px;
+				margin-left:70px;
+				padding-top:2px;
+				border-top:1px #dddddd dotted;
+			}
+			/* 限定table里面的长数字或者英文自动换行 */
+			#mainBannerContent .stateTable{
+				table-layout:fixed;
+				word-wrap:break-word;
+			}
+			/* 状态展示中文字部分 */
+			#mainBannerContent .stateShowWord{
+				width:450px;
+			}
+			/* 状态展示中的回复部分 */
+			#mainBannerContent .stateRshowWord{
+				width:380px;
+			}
+			
+			/* 回复状态里面的图片设置 */
+			#mainBannerContent .stateRshowWord img{
+				border:none;
+			}
+			/* 状态里面的图片设置 */
+			#mainBannerContent .stateShowWord img{
+				border:none;
+			}
+			/* 状态里面的图片DIV  */
+			#mainBannerContent .stateImgShow{
+				padding-left:70px;
+			}
+			/*  状态回复里面的图片DIV */
+			#mainBannerContent .stateRimgShow{
+				padding-left:70px;
+			}
+			/* 状态里面的操作DIV */
+			#mainBannerContent .stateOp{
+				float:right;
+				text-align:right;
+				visibility:hidden;
+				color:#969696;
+			}
+			/* 状态里面的操作链接 */			
+			.stateOp a{
+				margin:0px 10px;
+				cursor:hand;
+			}
+			a.opState:link{
+				color:#969696;
+				text-decoration:none;
+			}
+		    a.opState:hover{
+				color:#0CF;
+				text-decoration:underline;
+			}
+			a.opState:visited{
+				color:#969696;
+				text-decoration:none;
+			}
+			    
+/* 回复栏DIV样式 */
+.textright{	
+	float:right;
+	width:auto;
+	height:auto;
+}
+
+						 
+		/* 右侧mainRightDiv */
+		#mainRight{
+			padding:0px;
+			margin:0px;
+			border:0px;
+			width:200px;
+			height:auto;
+			float:right;
+			background-color:#E9F4FA;
+			padding-bottom:10px;
+		}			
+			/* 右侧内部第一行容器 mainRightPostionFirstLine DIV */ 
+			#mainRightPostionFirstLine{
+				width:200px;
+				height:135px;
+				background-color:#E9F4FA;
+				border-bottom:1px solid #A6D3E3;
+			}
+				/* 右侧第一行图标 mainRightFirstLineIcon DIV*/
+				#mainRightPostionFirstLineIcon{
+					padding:0px;
+					margin-top:40px;
+					margin-left:60px;
+					border:0px;
+					float:left;
+				}
+				/* 右侧第一行标题 mainRightFirstLineWord1 DIV*/
+				#mainRightPostionFirstLineWord1{
+					width:120px;
+					height:40px;
+					border:0px;
+					padding:0px;
+					float:right;
+					margin-top:10px;
+				}
+				/* 右侧第一行标题 mainRightFirstLineWord2 DIV*/
+				#mainRightPostionFirstLineWord2{
+					clear:both;
+					width:180px;
+					height:40px;
+					border:0px;
+					padding:0px;
+					margin-top:10px;
+				}				
+				/*  mainRightFirstLineWord2 ul格式 */
+				#mainRightPostionFirstLineWord2 ul{
+					list-style:none;
+					margin:0px;
+					padding:0px;
+				}
+				/*  mainRightFirstLineWord2 li格式 */
+				#mainRightPostionFirstLineWord2 ul li{
+					margin: 12px 10px;
+					float: left;
+					margin-left: 26px;
+				}					
+			/* 右侧内部第二行容器 mainRightPostionSecondLine DIV */ 
+			#mainRightPostionSecondLine{
+				width:200px;
+				padding:0px;
+				margin:0px;
+				border:0px;
+				height:184px;
+				background-color:#E9F4FA;				
+				border-bottom:1px solid #A6D3E3;
+			}
+				/*  右侧第二行内容 mainRightPositionSecondLineContent DIV*/
+				#mainRightPositionSecondLineContent{
+					margin-top:10px;
+					margin-left:15px;
+					padding:0px;
+					border:0px;
+					width:170px;
+					height:auto;
+				}
+				/*  右侧第二行内容 mainRightPositionSecondLineContent字体格式3 */
+				#mainRightPositionSecondLineContent font.style3{
+					font-size:15px;
+					color:#005DC3;
+				}
+			/* 右侧内部第三行容器 mainRightPostionThirdLine DIV */ 
+			#mainRightPostionThirdLine{
+				width:200px;
+				padding:0px;
+				margin:0px;
+				border:0px;
+				height:90px;
+				background-color:#E9F4FA;
+				border-bottom:1px solid #A6D3E3;
+			}
+				/* 右侧第三行内容mainRightPositionThirdLineContent DIV*/
+				#mainRightPositionThirdLineContent{
+					margin-left:15px;
+					margin-top:10px;
+					padding:0px;
+					border:0px;
+					width:170px;
+					height:30px;
+				}
+			/* 右侧内部第四行容器 mainRightPostionFourthLine DIV */ 
+			#mainRightPostionFouthLine{
+				width:200px;
+				padding:0px;
+				margin:0px;
+				border:0px;
+				height:318px;
+				background-color:#E9F4FA;
+				border-bottom:1px solid #A6D3E3;					
+			}	
+				/* 右侧第四行内容mainRightPositionThirdLineContent DIV */
+				#mainRightPositionFourthLineContent{
+					margin-left:15px;
+					margin-top:10px;
+					padding:0px;
+					border:0px;
+					width:170px;
+					height:25px;
+				}
+					#textfield1{
+						width:120px;
+						height:20px;
+					}
+					/* 右侧第四行 ul 样式 */
+					#ul2{
+						list-style:none;
+						margin:0px;
+						padding-left:15px;
+						
+					}
+			/* 右侧内部第五行容器 mainRightPostionFifthLine DIV */ 
+			#mainRightPostionFifthLine{
+				width:200px;
+				padding:0px;
+				margin:0px;
+				border:0px;
+				height:44px;
+				background-color:#E9F4FA;
+				border-bottom:1px solid #A6D3E3;					
+			}
+				#mainRightPositionFifthLineContent{
+					margin-top:10px;
+					margin-left:15px;
+					
+				}
+			/* 右侧内部第六行容器 mainRightPostionSixthLine DIV */ 
+			#mainRightPostionSixthLine{
+				width:200px;
+				padding:0px;
+				margin:0px;
+				border:0px;
+				height:130px;
+				background-color:#E9F4FA;
+				border-bottom:1px solid #A6D3E3;					
+			}
+				#mainRightPositionSixthLineContent{
+					margin-top:10px;
+					margin-left:15px;
+				}
+				#mainRightPostionSixthLine ul{
+					list-style:none;
+					padding:0px;
+					margin:10px 0px 0px 10px;
+				}
+				#mainRightPostionSixthLine ul li{
+					float:left;
+					margin:0px 5px;
+				}
+			/* 右侧内部第七行容器 mainRightPostionSeventhLine DIV */ 
+				
+			#mainRightPostionSeventhLine{
+				width:200px;
+				padding:0px;
+				margin:0px;
+				border:0px;
+				background-color:#E9F4FA;
+				/*padding-bottom:20px;*/
+			}
+				#mainRightPositionSevenLineContent{
+					padding:0px;
+					border:0px;
+					height:auto;
+					width:170px;
+					margin-top:10px;
+					margin-left:15px;
+					padding-bottom:20px;
+				}
+/* 超链接无下划线样式 */
+.a1{
+	text-decoration:none;
+}
+/* 超链接无下划线颜色为#999999 */
+.a3{
+	text-decoration:none;
+	color:#999999;
+}
+/*  Word字体格式1 */
+font.style1{
+	font-weight:700;
+	color:#555555;
+	font-size:16px;
+}
+/*  Word字体格式2 */
+font.style2{
+	color:#005DC3;
+}
+/*  Word字体格式3 */
+font.style4{
+	color:#000;
+	font-size:14px;
+}
+/* 右侧行线样式 */
+hr.h1{
+	border-top:1px dotted #79BDD1;
+	height:1px; 
+	border-bottom-style:none;
+}
+/* 回复DIV 样式 */
+#recieve{
+	visibility:hidden;
+	background-attachment:scroll;
+	width:540px;
+	height:195px;
+	position:absolute;
+	z-index:2;
+	background-color:#474747;
+	color:#000000;
+	top: 52px;
+	left: -31px;	
+}
+	/* 回复DIV */
+	#ff{
+		margin-top:10px;
+		margin-left:5px;
+	}
+	/* 白色区域 */
+	#wt{
+		height:120px;
+		width:528px;
+		margin-top:41px;
+		margin-left:6px;
+		margin-bottom:11px;
+		background-color:#FEFEFE;
+	}
+	/* 回复输入框样式 */
+	#ta1{
+		text-align:left;
+		margin-left:50px;
+		margin-top:14px;
+		width:450px;
+		height:60px;
+	}
+	/* 提交按钮 */
+	#sub1{
+		border:0px;
+		background-color:#1A90CE;
+		width:80px;
+		height:33px;
+		border-right:1px solid #196DC8;
+		
+	}
+  
+    /* footer部分*/
+	#footer{
+		width:765px;
+		height:50px;
+		margin:0px auto;
+		background-color:#C1E6F5;
+		clear:both;
+	}
+	/* footer链接部分*/
+	#footerLink{
+		width:600px;
+		height:30px;
+		margin:0px auto;
+		position:relative;
+		line-height:30px;
+		color:#444444;
+	}
+		/* footer部分的链接 */
+		#footerLink ul{
+			list-style:none;
+			padding:0px;
+			margin:0px;
+		}
+		#footerLink li{
+			/*float:left;*/
+			display:inline;
+			margin:0px 10px;
+		}
+	/* footer部分的版权信息 */
+	#footerCopy{
+		width:250px;
+		height:20px;
+		color:#444444;
+		line-height:20px;
+		margin:0px auto;
+		text-align:center;
+	}
+.a2{
+	color:#444444;
+	text-decoration:none;
+}

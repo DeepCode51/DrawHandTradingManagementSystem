@@ -1,0 +1,170 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+a{
+	color:white;
+}
+a:hover{
+	text-decoration: none;
+}
+a:link{
+	text-decoration: none;
+}
+html,body{
+	background-color: #d8dcdf;
+	font-size: 18px;
+}
+.r-top{
+	height: 160px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.titile{
+	height: 130px;
+	padding: 10px;
+	margin-top: 20px;
+}
+
+.img{
+	float:left;
+}
+.img i{
+	font-size: 100px;
+}
+.detail-info{
+	float: left;
+	margin-left: 50px;
+}
+.p1{
+	font-family: "楷体";
+	font-size: 44px;
+}
+.p2{
+	font-size: 28px;
+	color: #545557;
+	letter-spacing: 5px;
+}
+.r-main{
+	background-color: white;
+	overflow: hidde;
+	position: relative;
+	height:auto;
+}
+.mass{
+	position: relative;
+	min-height: 680px;
+	width: 100%;
+	
+}
+.term{
+	padding-top: 20px;
+	padding-left: 15px;
+	height: 35px;
+	font-size: 28px;
+	color: #000000;
+}
+.date{
+	margin-left: 80px;
+	width: 287px;
+}
+input::-webkit-input-placeholder{ /* WebKit browsers */ 
+font-size:10px;
+} 
+input::-moz-placeholder { /* WebKit browsers */ 
+font-size:10px;
+}
+}
+input::-ms-input-placeholder {
+	font-size:10px;
+}
+.date input{
+	width: 100px;
+	margin-left: 15px;
+}
+.choice{
+	width:150px;
+	appearance:none;  
+  -moz-appearance:none;  
+  -webkit-appearance:none; 
+   background: url(../img/down.png) no-repeat scroll right center transparent;  
+  	padding-right: 29px;
+}
+.put{
+	height: 160px;
+	padding: 15px;
+	margin-top: 50px;
+	border-top: 1px solid darkgrey;
+	border-bottom: 1px solid darkgrey;
+}
+.area{
+	text-align: center;
+	height: 80px;
+	width: 200px;
+	position: relative;
+	top: 50%;
+	margin: 0 auto;
+}
+.area input{
+	position: relative;
+	width: 60%;
+	bottom: 5px;
+}
+h3{
+	margin-left: 10px;
+}
+@media screen and (max-device-width: 768px) 
+{ 
+	
+	.titile{
+		height: 100px;
+		padding: 0;
+		position: relative;
+		width: 350px;
+		top:20%;
+		left: 50%;
+		margin-left: -135px;
+	}
+	.img i{
+		font-size: 70px;
+	}
+	.p1{
+		font-family: "楷体";
+		font-size: 30px;
+	}
+	.p2{
+		font-size: 16px;
+		color: #545557;
+		letter-spacing: 2px;
+	}
+	
+	.detail-info{
+		float: left;
+		margin-left: 10px;
+	}
+	
+	.term{
+		padding-top: 12px;
+		padding-left: 5px;
+		height: 60px;
+		font-size: 28px;
+		color: #000000;
+	}
+	.date{
+		margin-left: 30px;
+		width: 287px;
+	}
+	.date input{
+		width: 80px;
+		margin-left: 15px;
+	}
+	.choice{
+		margin-left: 35px;
+	}
+	.two{
+		margin-top:5px;
+		margin-left:108px;
+	}
+	
+｝
+

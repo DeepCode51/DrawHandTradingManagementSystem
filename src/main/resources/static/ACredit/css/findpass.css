@@ -1,0 +1,84 @@
+/* Header */
+.large-header {
+	position: relative;
+	width: 100%;
+	background: #333;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+}
+
+.demo-1 .large-header {
+	background-image: url("../img/demo-1-bg.jpg"/*tpa=http://www.17sucai.com/preview/668095/2017-07-19/perfect/img/demo-1-bg.jpg*/);
+	overflow: hidden;
+}
+.logo_box{
+	text-align: center;
+	width: 600px;
+	height: 500px;
+	padding: 35px;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	background: url(../img/login06.png) no-repeat;
+	background-size: cover;
+}
+.logo_box h1{
+	color: #000000;
+}
+.first,.second,.third,.fourth{
+	width:590px;
+	height:400px;
+	position: absolute;
+	left: 50%;
+	padding-top: 50px;
+	bottom: 0;
+	transform: translateX(-50%);
+}
+.second{
+		display: none;
+}
+.third{
+	display: none;
+}
+.fourth{
+		display: none;
+}
+.sno{
+		position: relative;
+}
+.sno input{
+
+	margin: 10px;
+	border: 1px saddlebrown solid;
+	text-indent: 2px;
+	height: 24px;
+}
+.s-left{
+	margin-left: 50px;
+}
+.check p {
+	color:red;
+	font-size:24px;
+}
+.mycheck,.submit{
+	margin-top: 30px;
+	background-color:#0096E6;
+	border: 0px;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 10px;
+	outline: none;
+}
+.mycheck:active,.submit:active{
+	background-color:#269ABC;
+	border: 1px solid darkblue;
+}
+.num{
+	position: absolute;
+	top:12px;
+}
+
+

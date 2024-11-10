@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.health.mapper.CaseMapper">
+        <select id="caseList" resultType="Case">
+               select * from chestCase
+               <if test="doctor!=null and doctor !=''">
+                   where doctor = #{doctor}
+               </if>
+        </select>
+
+        <select id="selectCase" resultType="Integer">
+               select point from chestCase where id = #{id}
+        </select>
+
+        <update id="addPoint">
+                update chestCase set point=#{point} where id=#{id}
+        </update>
+
+        <select id="caseDoctor" resultType="Case">
+               select * from chestCase where doctor = #{doctor}
+        </select>
+
+        <select id="caseDoctorChat" resultType="Chat">
+               select * from chat where receiveName = #{receiveName}
+        </select>
+
+        <delete id="deleteDoc">
+                delete from chestcase where id = #{id}
+        </delete>
+
+        <update id="sureChan">
+                update chestcase set
+                    doctor = #{doctor},
+                    type = #{type},
+                    content = #{content},
+                    price = #{price}
+                    where id = #{id}
+        </update>
+
+        <delete id="delShow">
+            delete from chestcase where id = #{id}
+        </delete>
+
+    <select id="editShow" resultType="com.example.health.bean.Case">
+        select * from chestcase where id = #{id}
+    </select>
+
+    <update id="showPass">
+        update chestcase set
+                 point = 1
+        where id = #{id}
+    </update>
+
+</mapper>

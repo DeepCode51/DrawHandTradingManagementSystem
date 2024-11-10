@@ -1,0 +1,257 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+input｛
+	font-family:serif;
+｝
+a{
+	color:white;
+}
+a:hover{
+	text-decoration: none;
+}
+a:link{
+	text-decoration: none;
+}
+html,body{
+	background-color: #d8dcdf;
+	font-size: 18px;
+	overflow-y: auto;
+	font-family:"微软雅黑";
+}
+.r-top{
+	height: 160px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.titile{
+	height: 130px;
+	padding: 20px;
+}
+
+.img{
+	float:left;
+}
+.img i{
+	font-size: 100px;
+}
+.detail-info{
+	float: left;
+	margin-left: 50px;
+}
+.p1{
+	font-family: "楷体";
+	font-size: 44px;
+}
+.p2{
+	font-size: 30px;
+	color: #545557;
+	letter-spacing: 5px;
+}
+.tab{
+	padding-left: 25px;
+	height: 30px;
+}
+.tab-left{
+	color:darkred;
+	display: inline-block;
+	padding-bottom: 5px;
+	border-bottom: 1px solid darkred;
+	border-bottom-width:medium;
+}
+.tab  a:hover{
+	color: darkred !important;
+	border-color: darkred !important;
+}
+.tab-right{
+	color: white;
+	display: inline-block;
+	padding-bottom: 5px;
+	border-bottom: 1px solid white;
+	border-bottom-width:medium;
+}
+.blank{
+	content: "";
+	width: 70px;
+	display: inline-block;
+}
+.r-main{
+	background-color: white;
+	overflow: hidden;
+	position: relative;
+	min-height: 700px;
+	height: auto;
+}
+.mass{
+	position: absolute;
+	min-height: 600px;
+	width: 100%;
+}
+.term{
+	padding-top: 20px;
+	padding-left: 15px;
+	height: 35px;
+	font-size: 28px;
+	color: #000000;
+}
+.choice{
+	margin-left: 50px;
+	display: inline-block;
+	width: 80%;
+	appearance:none;  
+  -moz-appearance:none;  
+  -webkit-appearance:none; 
+   background: url(../img/down.png) no-repeat scroll right center transparent;  
+  padding-right: 14px;
+ 
+}
+  select::-ms-expand { display: none; }
+.put{
+	height: 200px;
+	background-color: #fafafa;
+	padding: 15px;
+	margin-top: 50px;
+}
+.area{
+	text-align: center;
+	height: 120px;
+	width: 200px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0 auto;
+}
+.area p{
+	font-size: 24px;
+}
+.area i{
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	background: url(../img/char.png) no-repeat;
+}
+.putfile{
+	height: 60px;
+	text-align: center;
+	margin-top: 10px;
+}
+.btn-file{
+	color:#000000;
+	font-size: 26px;
+	display: inline-block;
+	border: 1px solid #000000;
+	padding: 10px;
+	cursor: pointer;
+}
+.btn-file i{
+	position: relative;
+	top:6px;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background: url(../img/card.png);
+}
+.btn-file span{
+	margin-left: 15px;
+	margin-right: 25px;
+}
+.single{
+	position: absolute;
+	display: none;
+	height: 800px;
+	width: 100%;
+}
+.myinput{
+	width: 600px;
+	margin: 0 auto;
+}
+.myinput label input,.myinput label select{
+	width: 450px!important;
+	margin-top: 10px;
+	height: 40px;
+	border:1px solid #ccc;
+    border-radius:5px;
+}
+.myinput .date,.myinput .oname{
+	background:#eee
+} 
+.myinput label span{
+	color: #838f9b;
+	font-size: 20px;
+	
+	font-weight: lighter;
+	display: inline-block;
+	width: 80px;
+	text-align: right;
+	margin-right: 20px;
+}
+.mybtn{
+	text-align: center;
+	margin-top: 20px;
+}
+.mybtn span{
+	display: inline-block;
+	width: 160px;
+}
+.btn:hover{
+	background-color: #838F9B;
+}
+.btn :active{
+	background-color: #838F9B;
+}
+.btn:focus{
+	outline: none;
+	background-color: whitesmoke;
+}
+@media screen and (max-width: 710px) {
+	.titile{
+		height: 100px;
+		padding: 8px;
+		width:375px;
+		position: relative;
+		top:30px;
+		left: 50%;
+		margin-left:-135px;
+	}
+	.img i{
+		font-size: 50px;
+	}
+	.detail-info{
+		float: left;
+		margin-left: 5px;
+	}
+	.p1{
+		font-size: 30px;
+	}
+	.p2{
+		font-size: 14px;
+		color: #545557;
+		letter-spacing: 2px;
+	}
+	.tab{
+		width:280px;
+		height: 30px;
+		margin: 20px auto;
+		
+	}
+	.choice{
+		margin-left: 30px;
+		width:60%;
+	}
+	.myinput{
+		width: 320px;
+		margin: 0 auto;
+	}
+	.myinput label input,.myinput label select{
+		width: 190px!important;
+		margin-top:8px;
+	}
+	.myinput label span{
+		text-align: right;
+		margin-right: 20px;
+	}
+	.mybtn span{
+		width: 100px;
+	}
+}

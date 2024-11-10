@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.health.mapper.ChatMapper">
+        <select id="chatList" resultType="Chat">
+               select * from chat where sendName = #{sendName} and receiveName = #{receiveName}
+               or sendName = #{receiveName} and receiveName = #{sendName}
+        </select>
+
+        <insert id="sendChat">
+                insert into chat(sendName,receiveName,content,sendByName,chatTitle,chatAbout,chatPrice,chatPath)
+                values (#{sendName},#{receiveName},#{content},#{sendByName},#{chatTitle},#{chatAbout},#{chatPrice},#{chatPath})
+        </insert>
+
+        <insert id="sendUploadWorks">
+            insert into chestcase(doctor,type,content,price,introduce,point)
+            values (#{doctor},#{type},#{content},#{price},#{introduce},2)
+        </insert>
+
+        <update id="editUploadWorks">
+            update chestcase set
+                     doctor = #{doctor},
+                     type = #{type},
+                     content = #{content},
+                     introduce = #{introduce},
+                     price = #{price}
+            where id = #{id}
+        </update>
+</mapper>

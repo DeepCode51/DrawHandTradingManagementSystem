@@ -1,0 +1,121 @@
+/* Header */
+.large-header {
+	position: relative;
+	width: 100%;
+	background: #333;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+}
+
+.demo-1 .large-header {
+	background-image: url("../img/demo-1-bg.jpg"/*tpa=http://www.17sucai.com/preview/668095/2017-07-19/perfect/img/demo-1-bg.jpg*/);
+	overflow: hidden;
+}
+.logo_box{
+	width: 700px;
+	height: 400px;
+	padding: 35px;
+	color: #EEE;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	background-color: #4A5153;
+	background-size: cover;
+}
+form{
+	width: 280px;
+	height: 300px;
+	float: right;
+}
+form div{
+	width: 220px;
+	margin: 20px auto;
+}
+.titile{
+	text-align: center;
+	color: darkred;
+	font-size: 24px;
+	margin-bottom: 30px;
+	margin-left: 5px;
+}
+.name,.pass{
+	position: relative;
+	margin:30px auto;
+}
+.name input{
+	border-radius: 15px;
+	border: 1px solid #566473;
+	outline:none;
+	padding: 2px 0px 5px 10px;
+}
+.pass input{
+	border-radius: 15px;
+	border: 1px solid #566473;
+	outline:none;
+	padding: 2px 0px 5px 10px;
+}
+form i{
+	position: absolute!important;
+	margin-left: -28px;
+	background:url(../img/login_ico.png) no-repeat;
+	border-radius: 3px;
+	width: 28px;
+	height: 26px;
+}
+.user{
+	background-position: -123px 2px;
+}
+.pwd{
+	background-position: -123px -32px;
+}
+.msg{
+	text-align: center;
+	color: red;
+}
+.submit input{
+	float: right;
+	border-radius: 15px;
+	width:80px;
+	border:1px solid #8B0000;
+	margin-right: 80px;
+	color: #8B0000;
+	padding: 3px 0px;
+	
+}
+.forget{
+	float: right;
+}
+@media screen and (max-device-width: 768px) 
+{ 
+	 .logo_box{
+	 	width: 500px;
+		height: 600px;
+		padding: 35px;
+		color: #EEE;
+		position: absolute;
+		left: 50%;
+		top:50%;
+		transform: translate(-50%,-50%);
+		background:url(../img/login06.png);
+		background-size: cover;
+	 }
+	 form{
+		width: 400px;
+		height: 500px;
+		margin: 80px auto;
+	}
+	form div{
+		width: 220px;
+		margin: 10px auto;
+	}
+	.titile{
+		text-align: center;
+		color: darkred;
+		font-size: 24px;
+		margin-bottom: 30px;
+		margin-left: 70px;
+	}
+} 

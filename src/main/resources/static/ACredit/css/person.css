@@ -1,0 +1,21 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.header{
+	min-width: 300px;
+	margin-top: 120px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.header p{
+	margin: 10px 0px;
+	font-size: 1.5rem;
+}
+.center{
+	width: 100%;
+	text-align: center;
+}
+.table{
+	overflow-x: auto;
+}

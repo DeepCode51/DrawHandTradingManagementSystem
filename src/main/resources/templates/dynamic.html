@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>画手论坛交流</title>
+    <link rel="stylesheet" href="css/style.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="ACredit/jsIndex/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+	<link rel="stylesheet" href="css/vendor/font-awesome.min.css">
+	<link rel="stylesheet" href="ACredit/jsIndex/style.css" type="text/css" media="all" />
+	<link href="css/CustomerIndex.css" type="text/css" rel="stylesheet" />
+	<link href="css/global.css" type="text/css" rel="stylesheet" />
+	<style type="text/css">
+		.thumbs_button{
+			width: 120px;
+			height: 40px;
+			line-height: 40px;
+			font-weight:bold;
+			font-size:16px;
+			-webkit-border-radius: 0 0 0 25px;
+			margin-left: 20px;
+		}
+		.chat.icon {
+			color: darkorange;
+			position: absolute;
+			margin-left: 2px;
+			margin-top: 4px;
+			width: 15px;
+			height: 10px;
+			border: solid 1px currentColor;
+			border-radius: 2px;
+		}
+
+		.chat.icon:before {
+			content: '';
+			position: absolute;
+			left: 3px;
+			top: 8px;
+			width: 4px;
+			height: 4px;
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+			background-color: white;
+			border-bottom: solid 1px currentColor;
+			border-right: solid 1px currentColor;
+		}
+		input,
+		textarea {
+			outline: none;
+			border: none;
+			display: block;
+			margin: 0;
+			padding: 0;
+			-webkit-font-smoothing: antialiased;
+			font-family: "PT Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+			font-size: 1rem;
+			color: #555f77;
+		}
+		input::-webkit-input-placeholder,
+		textarea::-webkit-input-placeholder {
+			color: #ced2db;
+		}
+		input::-moz-placeholder,
+		textarea::-moz-placeholder {
+			color: #ced2db;
+		}
+		input:-moz-placeholder,
+		textarea:-moz-placeholder {
+			color: #ced2db;
+		}
+		input:-ms-input-placeholder,
+		textarea:-ms-input-placeholder {
+			color: #ced2db;
+		}
+		p {
+			line-height: 1.3125rem;
+		}
+		.comments {
+			margin: 2.5rem auto 0;
+			max-width: 60.75rem;
+			padding: 0 1.25rem;
+		}
+		.comment-wrap {
+			margin-bottom: 1.25rem;
+			display: table;
+			width: 100%;
+			min-height: 5.3125rem;
+		}
+		.photo {
+			padding-top: 0.625rem;
+			display: table-cell;
+			width: 3.5rem;
+		}
+		.photo .avatar {
+			height: 2.25rem;
+			width: 2.25rem;
+			border-radius: 50%;
+			background-size: contain;
+		}
+		.comment-block {
+			padding: 1rem;
+			background-color: #fff;
+			display: table-cell;
+			vertical-align: top;
+			border-radius: 0.1875rem;
+			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+		}
+		.comment-block textarea {
+			width: 100%;
+			max-width: 100%;
+		}
+		.comment-text {
+			margin-bottom: 1.25rem;
+		}
+		.bottom-comment {
+			color: #acb4c2;
+			font-size: 0.875rem;
+		}
+		.comment-date {
+			float: left;
+		}
+		.comment-actions {
+			float: right;
+		}
+		.comment-actions li {
+			display: inline;
+		}
+		.comment-actions li.complain {
+			padding-right: 0.625rem;
+			border-right: 1px solid #e1e5eb;
+		}
+		.comment-actions li.reply {
+			padding-left: 0.625rem;
+		}
+
+	</style>
+</head>
+
+<body>
+    <div class="logo-navigation-w3layouts">
+    	<div class="container">
+    	<div class="logo-w3">
+    		<a href="index.html"><h1><img src="../ACredit/images/logo.png"/><span>画手交易系统</span></h1></a>
+    	</div>
+    	<div class="navbar-collapse agileits w3layouts collapse hover-effect" id="navbar">
+    		<ul class="agileits w3layouts">
+				<li class="agileits w3layouts"><a href="dynamic.html" >画手交易论坛</a></li>
+				<li class="agileits w3layouts"><a href="expertChat.html" id="sellDraw">画手买卖网</a></li>
+				<li class="agileits w3layouts" id="buyMess"><a href="doctor/doctor.html">买家消息</a></li>
+				<li class="agileits w3layouts"><a href="person/Person.html">个人中心</a></li>
+				<li class="agileits w3layouts"><a href="login.html">退出登录</a></li>
+    		</ul>
+    	</div>
+    	<div class="clearfix"></div>
+    	</div>
+    </div>
+	<span style="font-size: 50px;color: white;margin-left: 670px">画手交易论坛</span>
+
+	<!--隐藏此上传-->
+	<img src="" style="border: none;display: none" id="picture" width="300px" height="180px"><br>
+	<input type="file" id="file" accept="image/*" style="display: none">
+
+	<!--动态-->
+	<div id="container">
+
+		<!--标题图片-->
+		<div id="top">
+			<div id="topLogo">
+				<div id="topLogoIco"> <a href="#"></a>
+				</div>
+			</div>
+		</div>
+
+		<div id="main">
+			<!--左侧-->
+			<div id="mainBanner">
+
+				<!--发布-->
+				<div id="mainBannerTop">
+
+					<div id="mainBannerTopIssue">
+
+						<!--标题-->
+						<div id="mainBannerTopIssuePoint">正在发生的事情
+						</div>
+						<div style="float:right;">您还可以输入<span id="wordNumber">140</span>字！
+						</div>
+
+						<!--发表动态-->
+						<div id="mainBannerTopIssueForm">
+
+							<!--输入框-->
+							<div id="mainBannerTopIssueFrame">
+								<textarea name="textfield1" rows="4" class="Size" id="textfield2"  style="overflow:hidden;border:1px #0CF solid;"></textarea>
+							</div>
+
+							<!--距离-->
+							<div id="mainBannerTopIssueInsert">
+							</div>
+
+							<!--确认发布-->
+							<div id="mainBannerTopIssueSure">
+								<a href="#" class="a1" onclick="PackageUpload()">
+									<div id="mainBannerTopIssueInsert1">
+										<img src="../img/Album.jpg" style="height: 20px;width: 25px">
+									</div>
+									<div id="mainBannerTopIssueInsert2">插入图片 </div>
+								</a>
+								<button onclick="uploadImg()" class="btn btn-sqr">发布</button>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+				<!--首页-->
+				<div id="mainBannerTitle">
+					<div id="mainBannerTitleWord"><b>首页</b>
+					</div>
+				</div>
+
+				<!--动态界面渲染-->
+				<div id="mainBannerContent">
+				</div>
+
+			</div>
+			<!--右侧-->
+			<div id="mainRight">
+				<table width="200" border="0" cellpadding="0" cellspacing="0" bgcolor="#E9F4FA">
+					<tr>
+						<td bgcolor="#E9F4FA">
+							<div id="mainRightPostionFirstLine">
+								<div>
+									<div id="mainRightPostionFirstLineIcon">
+										<a href="#"><img src="" id="rightHead" alt="" width="80" height="70" align="absmiddle" title="" border="0" /></a><br>
+										<h6 id="userName" style="text-align: center;"></h6>
+									</div>
+								</div>
+								<div id="mainRightPostionFirstLineWord2">
+									<ul>
+									</ul>
+								</div>
+
+							</div>
+
+						</td>
+					</tr>
+
+				</table>
+			</div>
+		</div>
+	</div>
+
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+	<script src="ACredit/js/jquery.cookie.js"></script>
+	<script src="dynamic.js"></script>
+	<script src="layer/layer.js"></script>
+</body>
+</html>
